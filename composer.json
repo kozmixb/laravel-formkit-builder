@@ -22,10 +22,13 @@
         "illuminate/contracts": "^8.0|^9.0|^10.0"
     },
     "require-dev": {
+        "laravel/laravel": "^8.0|^9.0|^10.0",
         "nunomaduro/collision": "^5.10|^6.0|^7.0",
         "orchestra/testbench": "^8.0",
-        "phpunit/phpunit": "^9.5|^10.1",
-        "laravel/laravel": "^8.0|^9.0|^10.0"
+        "phpmd/phpmd": "*",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.3.3",
+        "squizlabs/php_codesniffer": "^3.6"
     },
     "autoload": {
         "psr-4": {
@@ -39,7 +42,11 @@
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse"
+        "style": "phpcs --standard=phpcs.xml",
+        "fix": "phpcbf",
+        "test": "phpunit --configuration phpunit.xml",
+        "stan": "phpstan analyse -l 6 src tests",
+        "md": "phpmd src text ruleset.xml"
     },
     "config": {
         "sort-packages": true,
