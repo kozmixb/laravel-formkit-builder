@@ -9,4 +9,6 @@ interface NodeInterface
     public function key(): string;
 
     public function value(): string;
+
+    public function requiresLabel(): bool;
 }

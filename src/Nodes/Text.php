@@ -25,4 +25,9 @@ class Text implements NodeInterface
     {
         return $this->value;
     }
+
+    public function requiresLabel(): bool
+    {
+        return false;
+    }
 }

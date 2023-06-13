@@ -25,4 +25,9 @@ class FormKit implements NodeInterface
     {
         return $this->value;
     }
+
+    public function requiresLabel(): bool
+    {
+        return true;
+    }
 }
