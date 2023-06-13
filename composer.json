@@ -49,11 +49,8 @@
         "md": "phpmd src text ruleset.xml"
     },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
