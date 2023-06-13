@@ -1,0 +1,63 @@
+{
+    "name": "kozmixb/laravel-formkit-builder",
+    "description": "Laravel formkit builder for restful apis",
+    "keywords": [
+        "kozmixb",
+        "laravel",
+        "laravel-formkit-builder",
+        "formkit",
+        "formkit builder"
+    ],
+    "homepage": "https://github.com/kozmixb/laravel-formkit-builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bence Kozma",
+            "email": "bencejob@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/contracts": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^5.10|^6.0|^7.0",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.5|^10.1",
+        "laravel/laravel": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kozmixb\\LaravelFormKitBuilder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kozmixb\\LaravelFormKitBuilder\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kozmixb\\LaravelFormKitBuilder\\ServiceProvider"
+            ],
+            "aliases": {
+                "Skeleton": "Kozmixb\\LaravelFormKitBuilder\\Facades\\Skeleton"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
