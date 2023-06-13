@@ -18,7 +18,9 @@ interface ElementInterface
 
     public function validationLabel(): ?string;
 
+    /** @return array<string, string|int|bool> */
     public function props(): array;
 
+    /** @return array<string, string|int|bool> */
     public function additionalParams(): array;
 }

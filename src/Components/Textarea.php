@@ -32,6 +32,7 @@ class Textarea extends BaseComponent
         return new FormKit('textarea');
     }
 
+    /** @return array<string, string|int|bool> */
     public function additionalParams(): array
     {
         return array_filter([

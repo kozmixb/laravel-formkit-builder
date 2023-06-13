@@ -94,6 +94,7 @@ abstract class ComponentTestCase extends TestCase
         );
     }
 
+    /** @return array<string, string|int|bool> */
     protected function getParameters(): array
     {
         return [];

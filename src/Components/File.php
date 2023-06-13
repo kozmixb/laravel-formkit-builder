@@ -15,6 +15,7 @@ class File extends BaseComponent
     /** @var array<int, string> */
     private $accepts;
 
+    /** @param array<int, string> $accepts */
     public function __construct(
         string $name,
         ?string $label = null,
@@ -32,6 +33,7 @@ class File extends BaseComponent
         return new FormKit('file');
     }
 
+    /** @return array<string, string|int|bool> */
     public function additionalParams(): array
     {
         return array_filter([

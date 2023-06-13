@@ -32,6 +32,7 @@ class Range extends BaseComponent
         return new FormKit('range');
     }
 
+    /** @return array<string, string|int|bool> */
     public function additionalParams(): array
     {
         return array_filter([

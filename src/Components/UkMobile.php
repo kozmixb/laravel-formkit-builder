@@ -14,6 +14,7 @@ class UkMobile extends BaseComponent
         return new FormKit('tel');
     }
 
+    /** @return array<string, string|int|bool> */
     public function additionalParams(): array
     {
         return [

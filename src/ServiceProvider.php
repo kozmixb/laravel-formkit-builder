@@ -14,8 +14,8 @@ class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
 {
     public function register(): void
     {
-        $this->app->bind(FormBuilder::class, function () {
-            return new FormBuilder();
+        $this->app->bind(FormSchemaBuilder::class, function () {
+            return new FormSchemaBuilder();
         });
     }
 
@@ -23,7 +23,7 @@ class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
     public function provides(): array
     {
         return [
-            FormBuilder::class,
+            FormSchemaBuilder::class,
         ];
     }
 }

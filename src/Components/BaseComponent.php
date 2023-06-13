@@ -49,11 +49,13 @@ abstract class BaseComponent implements ElementInterface
         return null;
     }
 
+    /** @return array<string, string|int|bool> */
     public function props(): array
     {
         return [];
     }
 
+    /** @return array<string, string|int|bool> */
     public function additionalParams(): array
     {
         return [];
