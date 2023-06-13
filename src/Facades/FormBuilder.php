@@ -7,12 +7,12 @@ namespace Kozmixb\LaravelFormKitBuilder\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Kozmixb\LaravelFormKitBuilder\FormBuilder
+ * @see \Kozmixb\LaravelFormKitBuilder\FormSchemaBuilder
  */
 class FormBuilder extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Kozmixb\LaravelFormKitBuilder\FormBuilder::class;
+        return \Kozmixb\LaravelFormKitBuilder\FormSchemaBuilder::class;
     }
 }
