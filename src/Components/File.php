@@ -29,7 +29,7 @@ class File extends BaseComponent
 
     public function node(): NodeInterface
     {
-        return new FormKit('date');
+        return new FormKit('file');
     }
 
     public function additionalParams(): array

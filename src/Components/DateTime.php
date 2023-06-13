@@ -7,7 +7,7 @@ namespace Kozmixb\LaravelFormKitBuilder\Components;
 use Kozmixb\LaravelFormKitBuilder\Contracts\NodeInterface;
 use Kozmixb\LaravelFormKitBuilder\Nodes\FormKit;
 
-/** 
+/**
  * DateTime is only available in PRO version
  */
 class DateTime extends BaseComponent
