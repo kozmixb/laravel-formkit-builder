@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Kozmixb\LaravelFormKitBuilder;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 /**
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
-class CustomServiceProvider extends ServiceProvider implements DeferrableProvider
+class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
 {
     public function register(): void
     {

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php:
+    container_name: kozmixb-laravel-formkit-builder
+    build:
+      context: 'docker'
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html/
