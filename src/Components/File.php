@@ -9,9 +9,6 @@ use Kozmixb\LaravelFormKitBuilder\Nodes\FormKit;
 
 class File extends BaseComponent
 {
-    /** @var string */
-    private $name;
-
     /** @var bool */
     private $multiple;
 
@@ -24,8 +21,8 @@ class File extends BaseComponent
         bool $multiple = false,
         array $accepts = []
     ) {
-        $this->name = $name;
-        $this->label = $label;
+        parent::__construct($name, $label);
+
         $this->multiple = $multiple;
         $this->accepts = $accepts;
     }
@@ -49,12 +46,14 @@ class File extends BaseComponent
             return null;
         }
 
-        return implode(',', array_map(
-            function (string $extension) {
-                return ".{$extension}";
-            },
-            $this->accepts
-        )
+        return implode(
+            ',',
+            array_map(
+                function (string $extension) {
+                    return ".{$extension}";
+                },
+                $this->accepts
+            )
         );
     }
 }

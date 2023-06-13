@@ -9,9 +9,6 @@ use Kozmixb\LaravelFormKitBuilder\Nodes\FormKit;
 
 class Textarea extends BaseComponent
 {
-    /** @var string */
-    private $name;
-
     /** @var int|null */
     private $rows;
 
@@ -24,8 +21,8 @@ class Textarea extends BaseComponent
         ?int $rows = null,
         ?int $cols = null
     ) {
-        $this->name = $name;
-        $this->label = $label;
+        parent::__construct($name, $label);
+
         $this->rows = $rows;
         $this->cols = $cols;
     }

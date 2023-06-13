@@ -9,11 +9,20 @@ use Kozmixb\LaravelFormKitBuilder\Contracts\ElementInterface;
 abstract class BaseComponent implements ElementInterface
 {
     /** @var string|null */
-    protected $label = null;
+    protected $label;
+
+    /** @var string|null */
+    protected $name;
+
+    public function __construct(?string $name, ?string $label)
+    {
+        $this->name = $name;
+        $this->label = $label;
+    }
 
     public function name(): ?string
     {
-        return null;
+        return $this->name;
     }
 
     public function label(): ?string

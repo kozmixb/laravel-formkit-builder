@@ -12,15 +12,6 @@ use Kozmixb\LaravelFormKitBuilder\Nodes\FormKit;
  */
 class DateTime extends BaseComponent
 {
-    /** @var string */
-    private $name;
-
-    public function __construct(string $name, ?string $label = null)
-    {
-        $this->name = $name;
-        $this->label = $label;
-    }
-
     public function node(): NodeInterface
     {
         return new FormKit('date');

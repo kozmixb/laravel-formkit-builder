@@ -14,6 +14,8 @@ class Header extends BaseComponent
 
     public function __construct(string $title)
     {
+        parent::__construct(null, null);
+
         $this->value = $title;
     }
 

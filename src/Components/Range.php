@@ -9,9 +9,6 @@ use Kozmixb\LaravelFormKitBuilder\Nodes\FormKit;
 
 class Range extends BaseComponent
 {
-    /** @var string */
-    private $name;
-
     /** @var int */
     private $min;
 
@@ -24,8 +21,8 @@ class Range extends BaseComponent
         int $min = 0,
         int $max = 100
     ) {
-        $this->name = $name;
-        $this->label = $label;
+        parent::__construct($name, $label);
+
         $this->min = $min;
         $this->max = $max;
     }
