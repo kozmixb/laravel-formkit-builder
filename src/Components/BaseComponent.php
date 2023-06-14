@@ -26,11 +26,6 @@ abstract class BaseComponent implements ElementInterface
         return $this->name;
     }
 
-    public function label(): string
-    {
-        return $this->name; //TODO
-    }
-
     public function attributes(): Attributes
     {
         if (!$this->attributes) {
@@ -43,5 +38,10 @@ abstract class BaseComponent implements ElementInterface
     public function addAttribute(AttributeInterface $attribute): void
     {
         $this->attributes()->add($attribute);
+    }
+
+    public static function casts(): ?string
+    {
+        return null;
     }
 }

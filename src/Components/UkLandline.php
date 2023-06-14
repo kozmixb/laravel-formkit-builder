@@ -25,4 +25,9 @@ class UkLandline extends BaseComponent
     {
         return new FormKit('tel');
     }
+
+    public static function casts(): ?string
+    {
+        return 'landline';
+    }
 }

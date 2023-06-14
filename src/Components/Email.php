@@ -13,4 +13,9 @@ class Email extends BaseComponent
     {
         return new FormKit('email');
     }
+
+    public static function casts(): ?string
+    {
+        return 'email';
+    }
 }

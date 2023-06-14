@@ -12,9 +12,9 @@ interface ElementInterface
 
     public function name(): string;
 
-    public function label(): string;
-
     public function attributes(): Attributes;
 
     public function addAttribute(AttributeInterface $attribute): void;
+
+    public static function casts(): ?string;
 }

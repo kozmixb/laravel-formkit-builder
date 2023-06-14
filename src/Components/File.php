@@ -13,4 +13,9 @@ class File extends BaseComponent
     {
         return new FormKit('file');
     }
+
+    public static function casts(): ?string
+    {
+        return 'file';
+    }
 }

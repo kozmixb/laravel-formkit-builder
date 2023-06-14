@@ -7,7 +7,6 @@ namespace Kozmixb\LaravelFormKitBuilder;
 use Kozmixb\LaravelFormKitBuilder\Attributes\Label;
 use Kozmixb\LaravelFormKitBuilder\Attributes\Validation;
 use Kozmixb\LaravelFormKitBuilder\Collections\Schema;
-use Kozmixb\LaravelFormKitBuilder\Components\TextInput;
 use Kozmixb\LaravelFormKitBuilder\Contracts\FormInterface;
 
 class FormSchemaBuilder
@@ -17,7 +16,9 @@ class FormSchemaBuilder
         return new Schema(
             array_map(
                 function (string $name, $validation) use ($form) {
-                    $element = new TextInput($name);
+                    $component = Mapper::map($name);
+
+                    $element = new $component($name);
 
                     $label = isset($form->labels()[$name]) ?
                         new Label($form->labels()[$name]) :
