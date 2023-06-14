@@ -37,6 +37,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "Examples\\": "example",
             "Kozmixb\\LaravelFormKitBuilder\\Tests\\": "tests/"
         }
     },
@@ -56,10 +57,7 @@
         "laravel": {
             "providers": [
                 "Kozmixb\\LaravelFormKitBuilder\\ServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Kozmixb\\LaravelFormKitBuilder\\Facades\\Skeleton"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
