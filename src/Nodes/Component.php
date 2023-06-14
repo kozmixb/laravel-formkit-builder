@@ -25,9 +25,4 @@ class Component implements NodeInterface
     {
         return $this->value;
     }
-
-    public function requiresLabel(): bool
-    {
-        return false;
-    }
 }
