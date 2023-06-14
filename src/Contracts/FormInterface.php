@@ -11,4 +11,7 @@ interface FormInterface
 
     /** @var array<string, string> */
     public function labels(): array;
+
+    /** @var array<string, string> */
+    public function casts(): array;
 }

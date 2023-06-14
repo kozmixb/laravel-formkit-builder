@@ -48,6 +48,11 @@ class SchemaBuilderTest extends TestCase
                     'name' => 'Full Name',
                 ];
             }
+
+            public function casts(): array
+            {
+                return [];
+            }
         };
     }
 }
