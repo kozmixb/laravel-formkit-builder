@@ -9,13 +9,14 @@ class Accepts extends Attribute
     public function __construct(array $extensions)
     {
         parent::__construct(
-            'min',
+            'accepts',
             implode(
                 ',',
                 array_map(
                     function (string $extension) {
                         return ".{$extension}";
-                    }
+                    },
+                    $extensions
                 )
             )
         );
