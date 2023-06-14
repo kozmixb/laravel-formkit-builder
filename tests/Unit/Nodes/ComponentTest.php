@@ -16,6 +16,5 @@ class ComponentTest extends TestCase
 
         $this->assertEquals('test', $node->value());
         $this->assertEquals('$cmp', $node->key());
-        $this->assertFalse($node->requiresLabel());
     }
 }

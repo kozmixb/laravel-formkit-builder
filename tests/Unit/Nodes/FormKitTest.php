@@ -16,6 +16,5 @@ class FormKitTest extends TestCase
 
         $this->assertEquals('test', $node->value());
         $this->assertEquals('$formkit', $node->key());
-        $this->assertTrue($node->requiresLabel());
     }
 }

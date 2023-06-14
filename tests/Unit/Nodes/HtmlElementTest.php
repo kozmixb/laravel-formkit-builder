@@ -16,6 +16,5 @@ class HtmlElementTest extends TestCase
 
         $this->assertEquals('test', $node->value());
         $this->assertEquals('$el', $node->key());
-        $this->assertFalse($node->requiresLabel());
     }
 }

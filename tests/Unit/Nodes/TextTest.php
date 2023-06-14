@@ -16,6 +16,5 @@ class TextTest extends TestCase
 
         $this->assertEquals('test', $node->value());
         $this->assertEquals('type', $node->key());
-        $this->assertFalse($node->requiresLabel());
     }
 }

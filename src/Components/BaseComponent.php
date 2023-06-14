@@ -4,60 +4,44 @@ declare(strict_types=1);
 
 namespace Kozmixb\LaravelFormKitBuilder\Components;
 
+use Kozmixb\LaravelFormKitBuilder\Contracts\AttributeInterface;
 use Kozmixb\LaravelFormKitBuilder\Contracts\ElementInterface;
+use Kozmixb\LaravelFormKitBuilder\Collections\Attributes;
 
 abstract class BaseComponent implements ElementInterface
 {
-    /** @var string|null */
-    protected $label;
-
-    /** @var string|null */
+    /** @var string */
     protected $name;
 
-    public function __construct(?string $name, ?string $label)
+    /** @var Attributes */
+    protected $attributes;
+
+    public function __construct(string $name)
     {
         $this->name = $name;
-        $this->label = $label;
     }
 
-    public function name(): ?string
+    public function name(): string
     {
         return $this->name;
     }
 
-    public function label(): ?string
+    public function label(): string
     {
-        if ($this->node()->requiresLabel()) {
-            return $this->label ?? $this->name();
+        return $this->name; //TODO
+    }
+
+    public function attributes(): Attributes
+    {
+        if (!$this->attributes) {
+            $this->attributes = new Attributes();
         }
 
-        return null;
+        return $this->attributes;
     }
 
-    public function help(): ?string
+    public function addAttribute(AttributeInterface $attribute): void
     {
-        return null;
-    }
-
-    public function validation(): string
-    {
-        return '';
-    }
-
-    public function validationLabel(): ?string
-    {
-        return null;
-    }
-
-    /** @return array<string, string|int|bool> */
-    public function props(): array
-    {
-        return [];
-    }
-
-    /** @return array<string, string|int|bool> */
-    public function additionalParams(): array
-    {
-        return [];
+        $this->attributes()->add($attribute);
     }
 }
