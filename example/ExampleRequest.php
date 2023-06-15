@@ -20,7 +20,7 @@ class ExampleRequest extends FormRequest
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'name' => ['required', 'string'],
             'password' => 'required|min:6',
-            'password_confirmation' => 'required|confirmed:password'
+            'password_confirmation' => 'required|same:password'
         ];
     }
 }

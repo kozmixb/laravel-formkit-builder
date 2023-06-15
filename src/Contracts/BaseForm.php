@@ -21,5 +21,10 @@ abstract class BaseForm implements FormInterface
         return $this->labels;
     }
 
+    public function casts(): array
+    {
+        return [];
+    }
+
     abstract protected function getRequestClass(): string;
 }

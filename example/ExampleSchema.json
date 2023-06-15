@@ -1,0 +1,26 @@
+[
+  {
+    "$formkit": "email",
+    "name": "email",
+    "label": "Email",
+    "validation": "required|email"
+  },
+  {
+    "$formkit": "text",
+    "name": "name",
+    "label": "Full Name",
+    "validation": "required"
+  },
+  {
+    "$formkit": "password",
+    "name": "password",
+    "label": "Password",
+    "validation": "required|min:6"
+  },
+  {
+    "$formkit": "password",
+    "name": "password_confirmation",
+    "label": "Password confirmation",
+    "validation": "required"
+  }
+]
