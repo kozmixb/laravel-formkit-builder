@@ -35,7 +35,9 @@ class ValidationFactory
 
     public static function convertRule(string $rule): ?string
     {
-        if ($formkitRule = config("formkit-schema.validations.exact.{$rule}")) {
+        $formkitRule = config("formkit-schema.validations.exact.{$rule}");
+
+        if ($formkitRule) {
             return $formkitRule;
         }
 
