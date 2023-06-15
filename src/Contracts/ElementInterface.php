@@ -15,6 +15,4 @@ interface ElementInterface
     public function attributes(): Attributes;
 
     public function addAttribute(AttributeInterface $attribute): void;
-
-    public static function casts(): ?string;
 }

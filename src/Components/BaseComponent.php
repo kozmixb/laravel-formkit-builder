@@ -39,9 +39,4 @@ abstract class BaseComponent implements ElementInterface
     {
         $this->attributes()->add($attribute);
     }
-
-    public static function casts(): ?string
-    {
-        return null;
-    }
 }

@@ -7,6 +7,7 @@ namespace Kozmixb\LaravelFormKitBuilder;
 use Kozmixb\LaravelFormKitBuilder\Attributes\Label;
 use Kozmixb\LaravelFormKitBuilder\Attributes\Validation;
 use Kozmixb\LaravelFormKitBuilder\Collections\Schema;
+use Kozmixb\LaravelFormKitBuilder\Contracts\ElementInterface;
 use Kozmixb\LaravelFormKitBuilder\Contracts\FormInterface;
 
 class FormSchemaBuilder
@@ -16,7 +17,7 @@ class FormSchemaBuilder
         return new Schema(
             array_map(
                 function (string $name, $validation) use ($form) {
-                    $component = Mapper::map($name);
+                    $component = $this->getComponentByName($name);
 
                     $element = new $component($name);
 
@@ -33,5 +34,12 @@ class FormSchemaBuilder
                 $form->rules()
             )
         );
+    }
+
+    private function getComponentByName(string $name): ElementInterface
+    {
+        $class = config("formkit-schema.mapping.{$name}") ?? config('formkit-schema.mapping.*');
+
+        return new $class($name);
     }
 }

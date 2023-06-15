@@ -13,9 +13,4 @@ class Password extends BaseComponent
     {
         return new FormKit('password');
     }
-
-    public static function casts(): ?string
-    {
-        return 'password';
-    }
 }
