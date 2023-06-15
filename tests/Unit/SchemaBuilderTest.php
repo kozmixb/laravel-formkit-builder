@@ -20,7 +20,7 @@ class SchemaBuilderTest extends TestCase
                 '$formkit' => 'text',
                 'name' => 'name',
                 'label' => 'Full Name',
-                'validation' => 'required|string'
+                'validation' => 'required'
             ],
             [
                 '$formkit' => 'password',

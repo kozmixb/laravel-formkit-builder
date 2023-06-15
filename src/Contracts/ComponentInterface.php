@@ -6,7 +6,7 @@ namespace Kozmixb\LaravelFormKitBuilder\Contracts;
 
 use Kozmixb\LaravelFormKitBuilder\Attributes\AttributeCollection;
 
-interface ElementInterface
+interface ComponentInterface
 {
     public function node(): NodeInterface;
 

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Kozmixb\LaravelFormKitBuilder\Components;
 
 use Kozmixb\LaravelFormKitBuilder\Contracts\AttributeInterface;
-use Kozmixb\LaravelFormKitBuilder\Contracts\ElementInterface;
+use Kozmixb\LaravelFormKitBuilder\Contracts\ComponentInterface;
 use Kozmixb\LaravelFormKitBuilder\Attributes\AttributeCollection;
 
-abstract class BaseComponent implements ElementInterface
+abstract class BaseComponent implements ComponentInterface
 {
     /** @var string */
     protected $name;
