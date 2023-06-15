@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kozmixb\LaravelFormKitBuilder\Collections;
+namespace Kozmixb\LaravelFormKitBuilder\Form;
 
 use Illuminate\Support\Collection;
 use Kozmixb\LaravelFormKitBuilder\Contracts\AttributeInterface;

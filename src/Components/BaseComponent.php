@@ -6,14 +6,14 @@ namespace Kozmixb\LaravelFormKitBuilder\Components;
 
 use Kozmixb\LaravelFormKitBuilder\Contracts\AttributeInterface;
 use Kozmixb\LaravelFormKitBuilder\Contracts\ElementInterface;
-use Kozmixb\LaravelFormKitBuilder\Collections\Attributes;
+use Kozmixb\LaravelFormKitBuilder\Attributes\AttributeCollection;
 
 abstract class BaseComponent implements ElementInterface
 {
     /** @var string */
     protected $name;
 
-    /** @var Attributes */
+    /** @var AttributeCollection */
     protected $attributes;
 
     public function __construct(string $name)
@@ -26,10 +26,10 @@ abstract class BaseComponent implements ElementInterface
         return $this->name;
     }
 
-    public function attributes(): Attributes
+    public function attributes(): AttributeCollection
     {
         if (!$this->attributes) {
-            $this->attributes = new Attributes();
+            $this->attributes = new AttributeCollection();
         }
 
         return $this->attributes;

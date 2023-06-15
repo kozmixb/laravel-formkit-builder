@@ -6,7 +6,7 @@ namespace Kozmixb\LaravelFormKitBuilder\Tests\Unit;
 
 use Kozmixb\LaravelFormKitBuilder\Contracts\FormInterface;
 use Kozmixb\LaravelFormKitBuilder\FormSchemaBuilder;
-use PHPUnit\Framework\TestCase;
+use Kozmixb\LaravelFormKitBuilder\Tests\TestCase;
 
 class SchemaBuilderTest extends TestCase
 {

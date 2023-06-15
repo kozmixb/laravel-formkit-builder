@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Kozmixb\LaravelFormKitBuilder\Contracts;
 
-use Kozmixb\LaravelFormKitBuilder\Collections\Attributes;
+use Kozmixb\LaravelFormKitBuilder\Attributes\AttributeCollection;
 
 interface ElementInterface
 {
@@ -12,7 +12,7 @@ interface ElementInterface
 
     public function name(): string;
 
-    public function attributes(): Attributes;
+    public function attributes(): AttributeCollection;
 
     public function addAttribute(AttributeInterface $attribute): void;
 }
