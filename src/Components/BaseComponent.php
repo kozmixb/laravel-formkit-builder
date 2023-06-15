@@ -13,7 +13,7 @@ abstract class BaseComponent implements ComponentInterface
     /** @var string */
     protected $name;
 
-    /** @var AttributeCollection */
+    /** @var AttributeCollection|null */
     protected $attributes;
 
     public function __construct(string $name)

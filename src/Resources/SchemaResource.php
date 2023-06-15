@@ -18,6 +18,7 @@ class SchemaResource extends JsonResource
         $this->resource = $resource;
     }
 
+    /** @return array<mixed> */
     public function toArray(Request $request): array
     {
         return [];

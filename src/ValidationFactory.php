@@ -8,6 +8,7 @@ use Kozmixb\LaravelFormKitBuilder\Attributes\Validation;
 
 class ValidationFactory
 {
+    /** @phpstan-ignore-next-line */
     public static function transform($validation): Validation
     {
         $rules = [];

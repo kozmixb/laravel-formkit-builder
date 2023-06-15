@@ -34,6 +34,8 @@ class SchemaBuilderTest extends TestCase
     protected function getForm(): FormInterface
     {
         return new class implements FormInterface {
+
+            /** @return array<string, string> */
             public function rules(): array
             {
                 return [
@@ -42,6 +44,7 @@ class SchemaBuilderTest extends TestCase
                 ];
             }
 
+            /** @return array<string, string> */
             public function labels(): array
             {
                 return [
@@ -49,6 +52,7 @@ class SchemaBuilderTest extends TestCase
                 ];
             }
 
+            /** @return array<string, string> */
             public function casts(): array
             {
                 return [];

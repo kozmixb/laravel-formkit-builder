@@ -6,12 +6,12 @@ namespace Kozmixb\LaravelFormKitBuilder\Contracts;
 
 interface FormInterface
 {
-    /** @var array<string, mixed */
+    /** @return array<string, mixed> */
     public function rules(): array;
 
-    /** @var array<string, string> */
+    /** @return array<string, string> */
     public function labels(): array;
 
-    /** @var array<string, string> */
+    /** @return array<string, string> */
     public function casts(): array;
 }

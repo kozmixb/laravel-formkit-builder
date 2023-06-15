@@ -18,7 +18,12 @@ class UkMobile extends BaseComponent
 
         $this->addAttribute(new Placeholder('+44 xxxx xxxxxxx'));
         $this->addAttribute(new Validation('matches:^(?:0|\+?44)(?:\d\s?){9,10}$/'));
-        $this->addAttribute(new Attribute(':validation-messages', "{matches: 'Phone number must be in the format xxx-xxx-xxxx'}"));
+        $this->addAttribute(
+            new Attribute(
+                ':validation-messages',
+                "{matches: 'Phone number must be in the format xxx-xxx-xxxx'}"
+            )
+        );
     }
 
     public function node(): NodeInterface

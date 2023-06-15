@@ -18,7 +18,12 @@ class UkLandline extends BaseComponent
 
         $this->addAttribute(new Placeholder('+44 xxxx xxxxxxx'));
         $this->addAttribute(new Validation('matches:^0\d{2,4}[ -]{1}[\d]{3}[\d -]{1}[\d -]{1}[\d]{1,4}$/'));
-        $this->addAttribute(new Attribute(':validation-messages', "{matches: 'Phone number must be in the format xxx-xxx-xxxx'}"));
+        $this->addAttribute(
+            new Attribute(
+                ':validation-messages',
+                "{matches: 'Phone number must be in the format xxx-xxx-xxxx'}"
+            )
+        );
     }
 
     public function node(): NodeInterface

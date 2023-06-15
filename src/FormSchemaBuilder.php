@@ -41,7 +41,7 @@ class FormSchemaBuilder
         return new $class($name);
     }
 
-    private function fetchLabel(string $name)
+    private function fetchLabel(string $name): Label
     {
         return isset($this->form->labels()[$name]) ?
             new Label($this->form->labels()[$name]) :

@@ -6,6 +6,7 @@ namespace Kozmixb\LaravelFormKitBuilder\Attributes;
 
 class Accepts extends Attribute
 {
+    /** @param string[] $extensions */
     public function __construct(array $extensions)
     {
         parent::__construct(

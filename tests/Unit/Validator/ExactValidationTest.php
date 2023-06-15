@@ -20,6 +20,7 @@ class ExactValidationTest extends TestCase
         $this->assertEquals($to, $result);
     }
 
+    /** @return array<string, string[]> */
     public function provider(): array
     {
         return [

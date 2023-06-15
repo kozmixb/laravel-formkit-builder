@@ -21,6 +21,7 @@ class AttributesTest extends TestCase
         $this->assertEquals($key, $attribute->key());
     }
 
+    /** @return array<string, array<string>> */
     public function provider(): array
     {
         return [
